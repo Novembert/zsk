@@ -57,7 +57,7 @@
     $y = 2;
     $wynik = $x <=> $y;
 
-    echo $wynik.'<br>';
+    echo $wynik.'<hr>';
 
     //////////////////// zadanko
 
@@ -70,6 +70,38 @@
     $y = ++$x;//        x=6
     echo $y;//    6
     echo ++$y;//  7
+    echo '<hr >';
+
+    //////////////////// koniec
+
+    $text1 = '4ssd';
+    $text2 = 'lechtekst';
+    $text3 = '7';
+    $num = 15;
+    $j = -1;
+    $c = 100;
+
+    // operatory rzutowania
+
+    $x = (int)$text1;
+    echo $x.'<br>';
+    $x = (bool)$j;
+    echo $x.'<br>';
+    $c = (unset)$c;
+    echo $c.'<br>';
+    echo gettype($c).'<br>';
+
+    $l = (float)$num;
+    echo $l.'<br>';
+    echo gettype($l).'<br>';
+
+    //rozmiar integera
+    echo PHP_INT_SIZE.'<br';
+
+    $w;
+
+    // echo gettype($w).'<br>'; FATAL ERROR!!!!!
+
     ?>
   </body>
 </html>
