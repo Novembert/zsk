@@ -87,6 +87,64 @@ echo $pozycja,'<br>';
 $text1 = 'abcdabcd';
 $text2 = 'ab';
 
+$pozycja = strpos($text1,$text2);
+if(gettype($pozycja)=='integer') {
+  echo 'git';
+}
 
+if($pozycja > -1){
+  echo 'git';
+}
+echo '<hr>';
+
+############ przetwarzannie ciagow znakow
+
+$replace = str_replace('%name%','Janusz','Mam na imię %name%');
+echo $replace,'<br>';
+
+$surname = substr('Janusz Kowalski',3);
+echo $surname,'<br>';
+
+$surname = substr('Janusz Kowalski',-5);
+echo $surname,'<br>';
+
+$surname = substr('Janusz Kowalski',-8,-3);
+echo $surname,'<br>';
+
+// zamiana polskich znakow
+
+$login =  'żąkoł';
+$censore = array('ą','ę','ś','ź','ż','ć','ó','ń','ł');
+$replace = array('a','e','s','z','z','c','o','n','l');
+
+$newlogin = str_replace($censore,$replace,$login);
+echo ucfirst($newlogin),'<br>'; // Zakol
+
+/*
+
+User podaje dane w form i biały, czarny zamienia sie na '  ####  '
+
+*/
+ob_clean();
+
+  echo <<< FORM
+  <form  method="post">
+  <input type="text" name="dane" placeholder="Wpisz zadanie">
+  <br>
+  <br>
+  <input type="submit" value="Zatwierdź">
+  </form>
+FORM;
+
+if(isset($_POST['dane'])){
+  $data = $_POST['dane'];
+
+  $censore = array('czarny','biały');
+  $replace = '  #####  ';
+  $newdata = str_replace($censore,$replace,$data);
+
+  echo "<h5>Błędne dane: $data</h5>";
+  echo "<h2>Prawidłowe dane: $newdata</h2>";
+}
 
 ?>
