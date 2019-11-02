@@ -1,0 +1,21 @@
+form {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px 5px;
+}
+
+td.red {
+  background-color: red;
+}
