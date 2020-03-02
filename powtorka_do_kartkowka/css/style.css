@@ -1,0 +1,21 @@
+table, td, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+form {
+    margin: 10px 0;
+}
+
+form > div {
+    margin: 5px 0;
+}
+
+form > div > input {
+    display: block;
+    margin: 2px 0;
+}
